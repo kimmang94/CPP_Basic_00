@@ -31,10 +31,6 @@ int main()
 		}
 	}
 
-	// 가위 바위 보
-	int rock = 1;
-	int scissors = 2;
-	int paper = 3;
 
 	// 간단한 전투
 	int playerHp = 100;
@@ -61,23 +57,70 @@ int main()
 		}
 	}
 
+	// 가위 바위 보
+	const int rock = 0;
+	const int scissors = 1;
+	const int paper = 2;
+
 	int playerChoice = 0;
-	int compuyerChoice = 1;
-	cout << "1 : 바위 2 : 가위 3 : 보" << endl << "나의 선택 >";
+
+	srand(time(0));
+	int compuyerChoice = rand() % 3;
+
+	cout << "0 : 바위 1 : 가위 2 : 보" << endl << "나의 선택 >";
 	cin >> playerChoice;
 
 	if (playerChoice == rock)
 	{
-		cout << "바위" << endl;
-
+		switch (compuyerChoice)
+		{
+		case rock:
+			cout << "나의선택 : 바위 컴퓨터의 선택 : 바위 비겼습니다" << endl;
+			break;
+		case scissors:
+			cout << "나의선택 : 바위 컴퓨터의 선택 : 가위 이겼습니다" << endl;
+			break;
+		case paper:
+			cout << "나의선택 : 바위 컴퓨터의 선택 : 보 졌습니다" << endl;
+			break;
+		default:
+			break;
+		}
+		
 	}
 	else if (playerChoice == scissors)
 	{
-		cout << "가위" << endl;
+		switch (compuyerChoice)
+		{
+		case rock:
+			cout << "나의선택 : 가위 컴퓨터의 선택 : 바위 졌습니다" << endl;
+			break;
+		case scissors:
+			cout << "나의선택 : 가위 컴퓨터의 선택 : 가위 비겼습니다" << endl;
+			break;
+		case paper:
+			cout << "나의선택 : 가위 컴퓨터의 선택 : 보 이겼습니다" << endl;
+			break;
+		default:
+			break;
+		}
 	}
 	else if (playerChoice == paper)
 	{
-		cout << "보" << endl;
+		switch (compuyerChoice)
+		{
+		case rock:
+			cout << "나의선택 : 보 컴퓨터의 선택 : 바위 이겼습니다" << endl;
+			break;
+		case scissors:
+			cout << "나의선택 : 보 컴퓨터의 선택 : 가위 졌습니다" << endl;
+			break;
+		case paper:
+			cout << "나의선택 : 보 컴퓨터의 선택 : 보 비겼습니다" << endl;
+			break;
+		default:
+			break;
+		}
 	}
 	else
 	{
