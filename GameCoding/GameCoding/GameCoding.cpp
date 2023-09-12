@@ -58,9 +58,9 @@ int main()
 	}
 
 	// 가위 바위 보
-	const int rock = 0;
-	const int scissors = 1;
-	const int paper = 2;
+	const int ROCK = 0;
+	const int SCISSORS = 1;
+	const int PAPER = 2;
 
 	int playerChoice = 0;
 
@@ -70,56 +70,56 @@ int main()
 	cout << "0 : 바위 1 : 가위 2 : 보" << endl << "나의 선택 >";
 	cin >> playerChoice;
 
-	if (playerChoice == rock)
+	if (playerChoice == ROCK)
 	{
 		switch (compuyerChoice)
 		{
-		case rock:
-			cout << "나의선택 : 바위 컴퓨터의 선택 : 바위 비겼습니다" << endl;
-			break;
-		case scissors:
-			cout << "나의선택 : 바위 컴퓨터의 선택 : 가위 이겼습니다" << endl;
-			break;
-		case paper:
-			cout << "나의선택 : 바위 컴퓨터의 선택 : 보 졌습니다" << endl;
-			break;
-		default:
-			break;
+			case ROCK:
+				cout << "나의선택 : 바위 컴퓨터의 선택 : 바위 비겼습니다" << endl;
+				break;
+			case SCISSORS:
+				cout << "나의선택 : 바위 컴퓨터의 선택 : 가위 이겼습니다" << endl;
+				break;
+			case PAPER:
+				cout << "나의선택 : 바위 컴퓨터의 선택 : 보 졌습니다" << endl;
+				break;
+			default:
+				break;
 		}
 		
 	}
-	else if (playerChoice == scissors)
+	else if (playerChoice == SCISSORS)
 	{
 		switch (compuyerChoice)
 		{
-		case rock:
-			cout << "나의선택 : 가위 컴퓨터의 선택 : 바위 졌습니다" << endl;
-			break;
-		case scissors:
-			cout << "나의선택 : 가위 컴퓨터의 선택 : 가위 비겼습니다" << endl;
-			break;
-		case paper:
-			cout << "나의선택 : 가위 컴퓨터의 선택 : 보 이겼습니다" << endl;
-			break;
-		default:
-			break;
+			case ROCK:
+				cout << "나의선택 : 가위 컴퓨터의 선택 : 바위 졌습니다" << endl;
+				break;
+			case SCISSORS:
+				cout << "나의선택 : 가위 컴퓨터의 선택 : 가위 비겼습니다" << endl;
+				break;
+			case PAPER:
+				cout << "나의선택 : 가위 컴퓨터의 선택 : 보 이겼습니다" << endl;
+				break;
+			default:
+				break;
 		}
 	}
-	else if (playerChoice == paper)
+	else if (playerChoice == PAPER)
 	{
 		switch (compuyerChoice)
 		{
-		case rock:
-			cout << "나의선택 : 보 컴퓨터의 선택 : 바위 이겼습니다" << endl;
-			break;
-		case scissors:
-			cout << "나의선택 : 보 컴퓨터의 선택 : 가위 졌습니다" << endl;
-			break;
-		case paper:
-			cout << "나의선택 : 보 컴퓨터의 선택 : 보 비겼습니다" << endl;
-			break;
-		default:
-			break;
+			case ROCK:
+				cout << "나의선택 : 보 컴퓨터의 선택 : 바위 이겼습니다" << endl;
+				break;
+			case SCISSORS:
+				cout << "나의선택 : 보 컴퓨터의 선택 : 가위 졌습니다" << endl;
+				break;
+			case PAPER:
+				cout << "나의선택 : 보 컴퓨터의 선택 : 보 비겼습니다" << endl;
+				break;
+			default:
+				break;
 		}
 	}
 	else
